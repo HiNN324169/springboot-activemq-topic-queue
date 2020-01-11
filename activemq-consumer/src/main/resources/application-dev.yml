@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  tomcat:
+    max-http-header-size: 8192
+
+spring:
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    password: admin
+    user: admin
+    pool:
+      max-connections: 100
+  jms:
+    pub-sub-domain: true
+
+queue.name: boot-queue # 自定义一个队列名称（取数据：@Value("${queue.name}")）
+topic.name: boot-topic # 自定义一个队列名称（取数据：@Value("${topic.name}")）
+
